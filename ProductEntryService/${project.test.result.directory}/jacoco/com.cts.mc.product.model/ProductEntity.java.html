@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProductEntity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ProductEntryService</a> &gt; <a href="index.source.html" class="el_package">com.cts.mc.product.model</a> &gt; <span class="el_source">ProductEntity.java</span></div><h1>ProductEntity.java</h1><pre class="source lang-java linenums">package com.cts.mc.product.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class ProductEntity implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long entityProductId;
+	@Column(name = &quot;productName&quot;)
+	private String entityProductName;
+	@Column(name = &quot;stock&quot;)
+	private int entityStock;
+	@Column(name = &quot;price&quot;)
+	private Double entityPrice;
+	@Column(name = &quot;offer&quot;)
+	private Double entityOffer;
+	
+	
+	public ProductEntity() {
+<span class="fc" id="L31">		super();</span>
+<span class="fc" id="L32">	}</span>
+	public ProductEntity(Long productId ,String productName, int stock, Double price, Double offer) {
+<span class="nc" id="L34">		super();</span>
+<span class="nc" id="L35">		this.entityProductId=productId;</span>
+<span class="nc" id="L36">		this.entityProductName = productName;</span>
+<span class="nc" id="L37">		this.entityStock = stock;</span>
+<span class="nc" id="L38">		this.entityPrice = price;</span>
+<span class="nc" id="L39">		this.entityPrice = offer;</span>
+<span class="nc" id="L40">	}</span>
+	public Long getEntityProductId() {
+<span class="nc" id="L42">		return entityProductId;</span>
+	}
+	public void setEntityProductId(Long entityProductId) {
+<span class="nc" id="L45">		this.entityProductId = entityProductId;</span>
+<span class="nc" id="L46">	}</span>
+	public String getEntityProductName() {
+<span class="nc" id="L48">		return entityProductName;</span>
+	}
+	public void setEntityProductName(String entityProductName) {
+<span class="nc" id="L51">		this.entityProductName = entityProductName;</span>
+<span class="nc" id="L52">	}</span>
+	public int getEntityStock() {
+<span class="nc" id="L54">		return entityStock;</span>
+	}
+	public void setEntityStock(int entityStock) {
+<span class="nc" id="L57">		this.entityStock = entityStock;</span>
+<span class="nc" id="L58">	}</span>
+	public Double getEntityPrice() {
+<span class="nc" id="L60">		return entityPrice;</span>
+	}
+	public void setEntityPrice(Double entityPrice) {
+<span class="nc" id="L63">		this.entityPrice = entityPrice;</span>
+<span class="nc" id="L64">	}</span>
+	public Double getEntityOffer() {
+<span class="nc" id="L66">		return entityOffer;</span>
+	}
+	public void setEntityOffer(Double entityOffer) {
+<span class="nc" id="L69">		this.entityOffer = entityOffer;</span>
+<span class="nc" id="L70">	}</span>
+	
+	
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

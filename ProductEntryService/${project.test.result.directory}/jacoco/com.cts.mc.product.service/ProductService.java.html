@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProductService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ProductEntryService</a> &gt; <a href="index.source.html" class="el_package">com.cts.mc.product.service</a> &gt; <span class="el_source">ProductService.java</span></div><h1>ProductService.java</h1><pre class="source lang-java linenums">package com.cts.mc.product.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cts.mc.product.dao.ProductRepository;
+import com.cts.mc.product.exception.ProductException;
+import com.cts.mc.product.model.Product;
+
+@Service
+<span class="fc" id="L13">public class ProductService implements IProductService{</span>
+@Autowired
+ProductRepository productRepository;
+	@Override
+	public Product addProduct(Product product) throws ProductException {
+<span class="fc" id="L18">		return productRepository.save(product);</span>
+	}
+
+	@Override
+	public Product updateProduct(Product product) throws ProductException {
+<span class="fc" id="L23">		return productRepository.save(product);</span>
+		
+	}
+
+	@Override
+	public String deleteProduct(Long productId) throws ProductException {
+<span class="nc" id="L29">		 productRepository.deleteById(productId);</span>
+<span class="nc" id="L30">		 return &quot;Product Deleted Successfully&quot;;</span>
+	}
+
+	@Override
+	public Product getProductById(Long productId) throws ProductException {
+<span class="fc" id="L35">		 Optional&lt;Product&gt; optionalProduct =  productRepository.findById(productId);</span>
+<span class="fc" id="L36">		 Product product =null;</span>
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">		 if(optionalProduct.isPresent()) {</span>
+<span class="fc" id="L38">			 product= optionalProduct.get();</span>
+		 }
+<span class="fc" id="L40">		 return product;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

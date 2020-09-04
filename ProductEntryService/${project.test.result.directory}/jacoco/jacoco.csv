@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+ProductEntryService,com.cts.mc.product.exception,ProductException,16,0,0,0,8,0,4,0,4,0
+ProductEntryService,com.cts.mc.product.model,Product,30,26,0,0,11,13,5,7,5,7
+ProductEntryService,com.cts.mc.product.model,ProductEntity,53,3,0,0,22,2,11,1,11,1
+ProductEntryService,com.cts.mc.product,ProductEntryServiceApplication,5,3,0,0,2,1,1,1,1,1
+ProductEntryService,com.cts.mc.product.config,SwaggerConfig,0,14,0,0,0,6,0,2,0,2
+ProductEntryService,com.cts.mc.product.handler,LambdaHandler,12,16,0,0,4,6,1,2,1,2
+ProductEntryService,com.cts.mc.product.controller,ProductController,15,55,0,0,2,8,1,5,1,5
+ProductEntryService,com.cts.mc.product.service,ProductService,6,31,1,1,2,8,2,4,1,4
